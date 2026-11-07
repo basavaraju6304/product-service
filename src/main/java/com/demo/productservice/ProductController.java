@@ -31,4 +31,9 @@ public class ProductController {
     public Product addProduct(@RequestBody Product product) {
         return repository.save(product);
     }
+
+    @GetMapping("/count")
+    public long getProductCount() {
+        return repository.count();
+    }
 }
